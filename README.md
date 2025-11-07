@@ -53,3 +53,10 @@ The client will typically start on `http://localhost:5173`
 - The client listens for these events and updates the visual indicator accordingly
 - When the button is clicked, the client emits a `button` event
 - The server receives the `button` event and logs a message to the console
+
+## To serve remotely and access on your local machine, change the IP addresses in the last lines in server.py to:
+print('Socket.IO server starting on http://0.0.0.0:5000')
+eventlet.wsgi.server(eventlet.listen(('0.0.0.0', 5000)), app)
+
+
+

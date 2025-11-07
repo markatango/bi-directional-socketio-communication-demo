@@ -34,6 +34,6 @@ if __name__ == '__main__':
     # Start the background task
     eventlet.spawn(emit_indicator)
     
-    print('Socket.IO server starting on http://0.0.0.0:5000')
-    eventlet.wsgi.server(eventlet.listen(('0.0.0.0', 5000)), app)
+    print('Socket.IO server starting on http://127.0.0.1:5000')
+    eventlet.wsgi.server(eventlet.listen(('127.0.0.1', 5000)), app)
 
